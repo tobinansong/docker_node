@@ -4,12 +4,12 @@ services:
     container_name: docker-node-mongo
     restart: always
     build: .
-    ports:
-      - '80:3000'
-    external_links:
+    ports: 
+      - "80:3000"
+    links:
       - mongo
-  mongo:
+  mongo: 
     container_name: mongo
     image: mongo
     ports:
-      - '27017:27017'
+      - "27017:27017"
